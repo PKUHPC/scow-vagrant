@@ -33,10 +33,6 @@ systemctl status slurmd
 systemctl restart slurmctld
 systemctl status slurmctld
 
-#sleep 5s
-
-#sacctmgr -i add account name=a_admin 
-#sacctmgr -i create qos name=low
-#sacctmgr -i create qos name=high
-#sacctmgr -i add user name=demo_admin account=a_admin partition=compute qos=low,high,normal defaultQOS=low
-#sacctmgr show ass format="Cluster,Account,User,Partition,QOS"
+sleep 5s
+sacctmgr -i create qos name=low
+sacctmgr -i create qos name=high
