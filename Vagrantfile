@@ -79,6 +79,7 @@ Vagrant.configure("2") do |config|
             vm_config.vm.provision "shell", path: "scripts/slurm_server.sh"
             vm_config.vm.provision "shell", path: "scripts/nfs_server.sh"
             vm_config.vm.provision "shell", path: "scripts/ldap_server.sh"
+            vm_config.vm.provision "shell", path: "scripts/ldap_client.sh"
             vm_config.vm.provision "shell", inline: "ssystemctl restart slapd"
             vm_config.vm.provision "shell", inline: "sleep 5s"
             vm_config.vm.provision "shell", inline: "ldapadd -x -D cn=Manager,$OU,$DN -w $adminPasswd -f /vagrant/slurm/demo_admin.ldif"
