@@ -258,7 +258,7 @@ echo "finished!"
 
 
 #  为vagrant添加--------
-ssystemctl restart slapd
+systemctl restart slapd
 sleep 5s
 ldapadd -x -D cn=Manager,$OU,$DN -w $adminPasswd -f /vagrant/slurm/demo_admin.ldif
 ldapmodify -x -D cn=Manager,$OU,$DN -w $adminPasswd  -f /vagrant/slurm/change_pw.ldif

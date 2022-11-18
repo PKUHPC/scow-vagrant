@@ -23,7 +23,7 @@ vm_list = [
     {
         :name => "cn01",
         :eth1 => "192.168.88.103",
-        :mem => "8192",
+        :mem => "4096",
         :cpu => "4",
         :sshport => 22233,
         :box => "icode/slurm_compute",
@@ -47,6 +47,7 @@ vm_list = [
 Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   Encoding.default_external = 'UTF-8'
+  config.vm.boot_timeout= 600
 
   vm_list.each do |item|
     config.vm.define item[:name] do |vm_config|
@@ -80,9 +81,6 @@ Vagrant.configure("2") do |config|
             vm_config.vm.provision "shell", path: "scripts/nfs_server.sh"
             vm_config.vm.provision "shell", path: "scripts/ldap_server.sh"
             vm_config.vm.provision "shell", path: "scripts/ldap_client.sh"
-            vm_config.vm.provision "shell", inline: "ssystemctl restart slapd"
-            vm_config.vm.provision "shell", inline: "sleep 5s"
-            vm_config.vm.provision "shell", inline: "ldapadd -x -D cn=Manager,$OU,$DN -w $adminPasswd -f /vagrant/slurm/demo_admin.ldif"
             
         else
             vm_config.vm.provision "shell", path: "scripts/slurm_client.sh"
