@@ -94,7 +94,7 @@ Vagrant.configure("2") do |config|
           vm_config.vm.provision "shell", inline: "sshpass -pvagrant ssh-copy-id -o StrictHostKeyChecking=no "+ it[:eth1]               
         end
         vm_config.vm.provision "shell", path: "scripts/scow.sh"
-        vm_config.vm.provision "shell", inline: "echo -e '\033[32m请通过http://"+item[:eth1]+"/mis/init/进行初始化\n 用户名/密码：demo_admin/demo_admin \033[0m'"
+        vm_config.vm.provision "shell", inline: "echo -e '\033[32m请通过http://"+item[:eth1]+"/mis/init/进行初始化\n用户名/密码：demo_admin/demo_admin \033[0m'"
         
     
       else
