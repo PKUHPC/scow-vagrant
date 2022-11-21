@@ -7,8 +7,8 @@
 | 节点名称/角色 |                           主要服务                           |     私网IP     | 配置 |
 | :-----------: | :----------------------------------------------------------: | :------------: | :--: |
 |     slurm     | slurmdbd、slurmctld、slurmd、mariadb、nfs-server、slapd、sssd | 192.168.88.101 | 2C4G |
-|     login     |                         slurmd、sssd                         | 192.168.88.102 | 2C4G |
-|     cn01      |                         slurmd、sssd                         | 192.168.88.103 | 4C4G |
+|     login     |         slurmd、sssd、nfs、Xfce、KDE、MATE、cinnamon         | 192.168.88.102 | 2C4G |
+|     cn01      |         slurmd、sssd、nfs、Xfce、KDE、MATE、cinnamon         | 192.168.88.103 | 4C4G |
 |     scow      |         scow：portal、mis、auth、gateway、export job         | 192.168.88.100 | 4C8G |
 
 
