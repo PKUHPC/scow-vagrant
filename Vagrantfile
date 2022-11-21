@@ -76,7 +76,6 @@ Vagrant.configure("2") do |config|
         
         vm_config.vm.provision "shell", path: "scripts/munge.sh"
         if item[:is_service_node]
-            #vm_config.vm.provision "shell", path: "scripts/mariadb.sh"
             vm_config.vm.provision "shell", path: "scripts/slurm_server.sh"
             vm_config.vm.provision "shell", path: "scripts/nfs_server.sh"
             vm_config.vm.provision "shell", path: "scripts/ldap_server.sh"
