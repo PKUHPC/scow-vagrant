@@ -84,8 +84,6 @@ vagrant destroy
 
 `scow\export-jobs\config.py`文件中的`cluster_db_conf.host`改为slurm节点IP，`mgt_db_conf.host`scow节点IP。
 
-
-
 以上配置修改完成之后执行部署命令：
 
 ```shell
@@ -140,6 +138,12 @@ slurm:
       nodes: 2
 
 # ...
+```
+
+以上配置修改完成之后执行部署命令：
+
+```shell
+vagrant up
 ```
 
 ## 4 .vagrant环境搭建
