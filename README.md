@@ -10,7 +10,7 @@
 |     cn01      |         slurmd、sssd、nfs、Xfce、KDE、MATE、cinnamon         | 192.168.88.103 | 4C4G |
 |     scow      |         scow：portal、mis、auth、gateway、export job         | 192.168.88.100 | 4C8G |
 
-
+> vagrant环境搭建可参考本文档第4部分
 
 ## 1. 使用
 
