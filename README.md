@@ -33,7 +33,29 @@ vagrant up
 
 ![image-20221121100431181](images/image-20221121100431181.png)
 
-### 1.3 集群一键销毁命令
+### 1.3 SCOW镜像更新
+
+由于SCOW的docker镜像是在构建Vagrant镜像时刻的master分支版本，若需最新功能，请更新SCOW最新镜像。
+
+```shell
+#登录到集群scow节点
+vagrant  ssh scow
+
+# 切换root用户，密码为：vagrant
+su root 
+
+# 进入scow部署目录
+/root/scow/scow-deployment
+
+# 拉取最新镜像
+./compose.sh pull
+
+# 重启服务
+./compose.sh down
+./compose.sh up -d
+```
+
+### 1.4 集群一键销毁命令
 
 ```shell
 vagrant  destroy
