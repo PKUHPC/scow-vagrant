@@ -1,6 +1,5 @@
 # scow-vagrant：slurm+SCOW集群一键部署
 
-[toc]
 
 本项目面向<font color='red' size=5>**开发**</font>和<font color='red' size=5>**测试**</font>人员，基于Vagrant，采用VirtualBox作为Provider，提供slurm+SCOW集群一键部署方案，极大简化了部署流程和部署门槛。部署slurm+SCOW四节点集群，节点角色及默认配置如下表所示：
 
